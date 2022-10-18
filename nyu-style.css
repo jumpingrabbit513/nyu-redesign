@@ -1,0 +1,130 @@
+/* jeff's css reset from lecture 9 slides */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#section-intro {
+    height: 30vw;
+    background-image: url("images/nyu-campus.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+#intro-header {
+    color: white;
+    font-weight: 900;
+    font-size: 5vw;
+    padding: 30px;
+}
+
+.main-search {
+    transition: all .3s ease-in-out;
+    width: 50vw;
+    max-width: 400px;
+}
+
+.main-search:hover {
+    max-width: 500px;
+}
+
+
+.content {
+    gap:50px
+}
+
+.news-media {
+    /* background-color: rgb(255, 148, 148); */
+    gap: 30px;
+    flex-wrap: wrap-reverse;
+
+}
+
+.media-body {
+    /* overflow: hidden; */
+}
+
+.news-image {
+    width: 200px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #650190;
+}
+
+#news-icon, #info-icon {
+    margin-right: 10px;
+    width: 30px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.col {
+    margin: 0;
+}
+
+.grid-image {
+    /* cursor: pointer; */
+}
+
+.info-container {
+   gap: 40px;
+   margin-bottom: 30px;
+}
+
+.cant-find {
+    gap: 7px;
+}
+
+.info-icon {
+    position:relative;
+}
+
+/* image hover technique taken from Sirv
+https://sirv.com/help/articles/hover-change-image/#:~:text=is%20explained%20below.-,Pure%20CSS%20to%20swap%20image%20on%20hover,and%20works%20on%20all%20browsers. */
+
+.info-icon img.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.info-icon:hover img.image-hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+#campus-image {
+    width: 70%;
+}
+
+.socials {
+    width: 20%;
+    cursor: pointer;
+}
